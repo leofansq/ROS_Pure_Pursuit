@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package>
+  <name>pure_pursuit</name>
+  <version>0.0.0</version>
+  <description>pure pursuit path following</description>
+
+  <author email="todo@gmail.com">todo</author>
+  <maintainer email="todo@gmail.com">todo</maintainer>
+
+  <license>MIT</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>orocos_kdl</build_depend>
+  <build_depend>ackermann_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>tf2</run_depend>
+  <run_depend>tf2_ros</run_depend>
+  <run_depend>orocos_kdl</run_depend>
+  <run_depend>ackermann_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

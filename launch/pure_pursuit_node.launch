@@ -1,0 +1,31 @@
+<launch>
+	<arg name="wheel_base" default="1.0" doc="wheelbase"/>
+	<arg name="lookahead_distance" default="4.0" doc="lookahead distance"/>
+	<arg name="w_max" default="1.0" doc="max rotational velocity"/>
+	<arg name="position_tolerance" default="0.1" doc="position tolerance"/>
+	<arg name="delta_vel" default="100.0" doc="steering angle velocity"/>
+	<arg name="acc" default="100.0" doc="acceleration"/>
+	<arg name="jerk" default="100.0" doc="jerk"/>
+	<arg name="delta_max" default="1.57" doc="steering angle limit"/>
+	<arg name="map_frame_id" default="map" doc="map frame id"/>
+	<arg name="robot_frame_id" default="base_link" doc="robot frame id"/>
+	<arg name="lookahead_frame_id" default="lookahead" doc="lookahead frame id"/>
+	<arg name="acker_frame_id" default="rear_axle_midpoint" doc="ackermann frame id"/>
+		
+	<!---run pure_pursuit -->
+	<node pkg="pure_pursuit" type="pure_pursuit" name="pure_pursuit" output="screen" >
+		<param name="wheelbase" value="$(arg wheel_base)"/>
+		<param name="lookahead_distance" value="$(arg lookahead_distance)"/>
+		<param name="max_rotational_velocity" value="$(arg w_max)"/>
+		<param name="position_tolerance" value="$(arg position_tolerance)"/>
+		<param name="steering_angle_velocity" value="$(arg delta_vel)"/>
+		<param name="acceleration" value="$(arg acc)"/>
+		<param name="jerk" value="$(arg jerk)"/>
+		<param name="steering_angle_limit" value="$(arg delta_max)"/>
+		<param name="map_frame_id" value="$(arg map_frame_id)"/>
+		<param name="robot_frame_id" value="$(arg robot_frame_id)"/>
+		<param name="lookahead_frame_id" value="$(arg lookahead_frame_id)"/>
+		<param name="acker_frame_id" value="$(arg acker_frame_id)"/>
+	</node>
+
+</launch>
